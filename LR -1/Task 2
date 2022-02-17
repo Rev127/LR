@@ -1,0 +1,39 @@
+#include <iostream>
+#include<math.h>
+#include<Windows.h>
+using namespace std;
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	int num;
+
+	//введення кількості елементів масиву:
+	cout << "Впишіть кількість елементів масву: ";
+	cin >> num;
+
+	int* mas = new int[num];
+
+	//введення даних в масив через цикл for:
+	for (int i = 0; i < num; i++)
+	{
+		cout << "mas[" << i << "] = ";
+		cin >> mas[i];
+	}
+
+	//перевертання масиву:
+	for (int i = 0, j = num - 1; i < floor(num / 2) && j > floor(num / 2); i++, j--)
+	{
+		swap(mas[i], mas[j]);
+	}
+	
+	//виведення перевернутого масиву:
+	cout << endl << "Перевернутий масив: " << endl;
+
+	for (int i = 0; i < num; i++)
+	{
+		cout << "mas[" << i << "] = " << mas[i] << endl;
+	}
+}
