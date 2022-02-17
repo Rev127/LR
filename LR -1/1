@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float a, b, c, min;
+
+    //вводимо числа a,b та c:
+    cin >> a >> b >> c;
+
+    //беремо одне з чисел за мінімальне(наприклад a) та зрівнюєм його з іншими числами:
+    min = a;
+    if (min > b)
+    {
+        min = b;
+    }
+    if (min > c)
+    {
+        min = c;
+    }
+
+    //виводимо мінімальне число 
+    cout << "min = " << min;
+
+    return 0;
+}
